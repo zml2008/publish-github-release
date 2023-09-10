@@ -40,12 +40,7 @@ For example, with [indra-git](https://github.com/KyoriPowered/indra/wiki/indra-g
 
 ```kotlin
 githubRelease.tagName.set(project.provider {
-  val headTag = indraGit.headTag()
-  if (headTag == null) {
-      null
-  } else {
-      org.eclipse.jgit.lib.Repository.shortenRefName(headTag.name)
-  }
+  indraGit.headTag()?.run { org.eclipse.jgit.lib.Repository.shortenRefName(name) }
 })
 ```
 
