@@ -1,0 +1,8 @@
+plugins {
+  id 'ca.stellardrift.publish-github-release'
+  id 'java'
+}
+
+githubRelease {
+  artifacts.from(tasks.named('jar').map { it.outputs })
+}

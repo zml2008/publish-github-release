@@ -1,0 +1,15 @@
+/.gradle/
+/.idea/
+/out/
+/build/
+/*.iml
+/.factorypath
+/.apt_generated/
+/.apt_generated_tests/
+/.checkstyle
+/.classpath
+/bin/
+/.project
+/.settings/
+
+.DS_Store
