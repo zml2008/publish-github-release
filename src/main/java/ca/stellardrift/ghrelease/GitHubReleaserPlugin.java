@@ -32,7 +32,12 @@ public class GitHubReleaserPlugin implements ProjectPlugin {
 
 
   @Override
-  public void apply(@NotNull Project project, @NotNull PluginContainer plugins, @NotNull ExtensionContainer extensions, @NotNull TaskContainer tasks) {
+  public void apply(
+    final @NotNull Project project,
+    final @NotNull PluginContainer plugins,
+    final @NotNull ExtensionContainer extensions,
+    final @NotNull TaskContainer tasks
+  ) {
     // extension
     final GithubReleaserExtension extension = extensions.create(
       GithubReleaserExtension.class,

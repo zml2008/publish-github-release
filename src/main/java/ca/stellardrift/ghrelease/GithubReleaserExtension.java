@@ -18,6 +18,7 @@
 package ca.stellardrift.ghrelease;
 
 import org.gradle.api.provider.Property;
+import org.jetbrains.annotations.NotNull;
 
 public interface GithubReleaserExtension extends ReleaseJobParameters {
   /**
@@ -27,7 +28,7 @@ public interface GithubReleaserExtension extends ReleaseJobParameters {
    *
    * @return the base url for the GitHub instance
    */
-  Property<String> getEnterpriseUrl();
+  @NotNull Property<String> getEnterpriseUrl();
 
   /**
    * Get the API token used to authenticate with GitHub.
@@ -36,5 +37,5 @@ public interface GithubReleaserExtension extends ReleaseJobParameters {
    *
    * @return the api token property
    */
-  Property<String> getApiToken();
+  @NotNull Property<String> getApiToken();
 }
