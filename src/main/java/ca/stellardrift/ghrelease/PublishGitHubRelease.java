@@ -94,7 +94,9 @@ public abstract class PublishGitHubRelease extends DefaultTask implements Releas
       releaseBuilder.commitish(this.getSourceBranch().get());
     }
 
-    // todo: generateReleaseNotes
+    if (this.getGenerateReleaseNotes().isPresent()) {
+      releaseBuilder.generateReleaseNotes(this.getGenerateReleaseNotes().get());
+    }
 
     if (this.getMakeLatest().isPresent()) {
       final GHReleaseBuilder.MakeLatest makeLatest;

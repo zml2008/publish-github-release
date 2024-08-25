@@ -109,7 +109,7 @@ class GitHubReleaserExtensionImpl implements GithubReleaserExtension {
     return this.discussionCategoryName;
   }
 
-  //@Override
+  @Override
   public @NotNull Property<Boolean> getGenerateReleaseNotes() {
     return this.generateReleaseNotes;
   }

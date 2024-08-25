@@ -74,7 +74,7 @@ public class GitHubReleaserPlugin implements ProjectPlugin {
       task.getDraft().set(sourceParameters.getDraft());
       task.getPrerelease().set(sourceParameters.getPrerelease());
       task.getDiscussionCategoryName().set(sourceParameters.getDiscussionCategoryName());
-      // task.getGenerateReleaseNotes().set(sourceParameters.getGenerateReleaseNotes());
+      task.getGenerateReleaseNotes().set(sourceParameters.getGenerateReleaseNotes());
       task.getMakeLatest().set(sourceParameters.getMakeLatest());
       task.getArtifacts().from(sourceParameters.getArtifacts());
     });

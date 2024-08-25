@@ -52,8 +52,8 @@ public interface ReleaseJobParameters {
   @Optional
   @NotNull Property<String> getDiscussionCategoryName();
 
-  //@Input
-  //Property<Boolean> getGenerateReleaseNotes(); // todo
+  @Input
+  Property<Boolean> getGenerateReleaseNotes();
 
   @Input
   @NotNull Property<LatestState> getMakeLatest();
