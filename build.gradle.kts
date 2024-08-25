@@ -27,7 +27,7 @@ indra {
   javaVersions {
     target(11)
     minimumToolchain(17)
-    testWith(11, 17, 20)
+    testWith(11, 17, 21)
   }
 
   configurePublications {
