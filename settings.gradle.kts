@@ -1,10 +1,10 @@
 pluginManagement {
   repositories {
-    maven("https://repo.stellardrift.ca/repository/internal/") {
+    maven("https://repo.stellardrift.ca/maven/internal/") {
       name = "stellardriftReleases"
       mavenContent { releasesOnly() }
     }
-    maven("https://repo.stellardrift.ca/repository/internal/") {
+    maven("https://repo.stellardrift.ca/maven/internal/") {
       name = "stellardriftSnapshots"
       mavenContent { releasesOnly() }
     }

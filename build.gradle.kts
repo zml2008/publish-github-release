@@ -42,8 +42,8 @@ indra {
     }
   }
 
-  publishReleasesTo("stellardrift", "https://repo.stellardrift.ca/repository/releases/")
-  publishSnapshotsTo("stellardrift", "https://repo.stellardrift.ca/repository/snapshots/")
+  publishReleasesTo("stellardrift", "https://repo.stellardrift.ca/maven/releases/")
+  publishSnapshotsTo("stellardrift", "https://repo.stellardrift.ca/maven/snapshots/")
 }
 
 tasks.jar {
