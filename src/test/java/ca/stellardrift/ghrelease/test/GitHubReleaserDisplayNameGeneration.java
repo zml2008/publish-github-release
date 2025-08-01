@@ -18,11 +18,12 @@
 package ca.stellardrift.ghrelease.test;
 
 import java.lang.reflect.Method;
+import java.util.List;
 import org.junit.jupiter.api.DisplayNameGenerator;
 
 public class GitHubReleaserDisplayNameGeneration extends DisplayNameGenerator.Standard {
   @Override
-  public String generateDisplayNameForMethod(final Class<?> clazz, final Method testMethod) {
+  public String generateDisplayNameForMethod(final List<Class<?>> nestedClazzes, final Class<?> clazz, final Method testMethod) {
     final String name = testMethod.getName();
     if (name.startsWith("test") && name.length() > 5) {
       return Character.toLowerCase(name.charAt(4)) + name.substring(5);
