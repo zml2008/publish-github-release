@@ -22,6 +22,8 @@ import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.Optional;
+import org.gradle.api.tasks.PathSensitive;
+import org.gradle.api.tasks.PathSensitivity;
 import org.jetbrains.annotations.NotNull;
 
 public interface ReleaseJobParameters {
@@ -59,6 +61,7 @@ public interface ReleaseJobParameters {
   @NotNull Property<LatestState> getMakeLatest();
 
   @InputFiles
+  @PathSensitive(PathSensitivity.RELATIVE)
   @NotNull ConfigurableFileCollection getArtifacts();
 
   enum LatestState {

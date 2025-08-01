@@ -26,6 +26,7 @@ import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.TaskAction;
+import org.gradle.work.DisableCachingByDefault;
 import org.jetbrains.annotations.NotNull;
 import org.kohsuke.github.GHRelease;
 import org.kohsuke.github.GHReleaseBuilder;
@@ -35,6 +36,7 @@ import org.kohsuke.github.GitHubBuilder;
 import org.kohsuke.github.GitHubRateLimitHandler;
 import org.kohsuke.github.connector.GitHubConnectorResponse;
 
+@DisableCachingByDefault(because = "Task submits artifacts to external API")
 public abstract class PublishGitHubRelease extends DefaultTask implements ReleaseJobParameters {
 
   @Input

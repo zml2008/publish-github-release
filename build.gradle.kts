@@ -46,9 +46,15 @@ indra {
   publishSnapshotsTo("stellardrift", "https://repo.stellardrift.ca/maven/snapshots/")
 }
 
-tasks.jar {
-  indraGit.applyVcsInformationToManifest(manifest)
+tasks {
+  jar {
+    indraGit.applyVcsInformationToManifest(manifest)
+  }
+  validatePlugins {
+    enableStricterValidation = true
+  }
 }
+
 
 indraPluginPublishing {
   website("https://publish-github-release.stellardrift.ca")
