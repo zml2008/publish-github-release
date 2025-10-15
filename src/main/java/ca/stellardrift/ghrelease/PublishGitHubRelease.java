@@ -27,7 +27,6 @@ import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.work.DisableCachingByDefault;
-import org.jetbrains.annotations.NotNull;
 import org.kohsuke.github.GHRelease;
 import org.kohsuke.github.GHReleaseBuilder;
 import org.kohsuke.github.GHRepository;
@@ -54,7 +53,7 @@ public abstract class PublishGitHubRelease extends DefaultTask implements Releas
     builder.withOAuthToken(this.getApiToken().get());
     builder.withRateLimitHandler(new GitHubRateLimitHandler() {
       @Override
-      public void onError(@NotNull GitHubConnectorResponse response) throws IOException {
+      public void onError(final GitHubConnectorResponse response) throws IOException {
         getLogger().error(
           "Exceeded rate limit while trying to publish release (code {}): {}",
           response.statusCode(),
