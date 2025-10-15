@@ -55,7 +55,6 @@ tasks {
   }
 }
 
-
 indraPluginPublishing {
   website("https://publish-github-release.stellardrift.ca")
   plugin(
@@ -72,7 +71,7 @@ spotless {
     removeUnusedImports()
     importOrderFile(rootProject.file(".spotless/stellardrift.importorder"))
     endWithNewline()
-    indentWithSpaces(2)
+    leadingTabsToSpaces(2)
     trimTrailingWhitespace()
   }
 }
