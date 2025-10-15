@@ -8,7 +8,7 @@ mammoth = "1.5.0"
 
 [libraries]
 githubApi = { module = "org.kohsuke:github-api", version = "1.330"}
-jetbrainsAnnotations = { module = "org.jetbrains:annotations", version = "26.0.2"}
+jetbrainsAnnotations = { module = "org.jetbrains:annotations", version = "26.0.2-1"}
 mammoth = { module = "net.kyori:mammoth", version.ref = "mammoth" }
 
 # testing
