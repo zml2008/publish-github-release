@@ -30,8 +30,9 @@ import net.kyori.mammoth.test.TestVariantResource;
 @GradleFunctionalTest
 @GradleParameters({"--warning-mode", "fail", "--stacktrace"}) // parameters for all variants
 @TestVariant(gradleVersion = "8.9", extraArguments = {"--configuration-cache"}, maximumRuntimeVersion = 16)
-@TestVariant(gradleVersion = "8.10", extraArguments = {"--configuration-cache"}, minimumRuntimeVersion = 17)
-@TestVariantResource(value = "/injected-gradle-versions", optional = true, minimumRuntimeVersion = 17)
+@TestVariant(gradleVersion = "8.10", extraArguments = {"--configuration-cache"}, maximumRuntimeVersion = 24)
+@TestVariant(gradleVersion = "9.1.0", extraArguments = {"--configuration-cache"})
+@TestVariantResource(value = "/injected-gradle-versions", optional = true)
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD})
