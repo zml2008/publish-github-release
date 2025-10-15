@@ -9,14 +9,14 @@ plugins {
 
 dependencies {
   api(libs.mammoth)
-  compileOnlyApi(libs.jetbrainsAnnotations)
+  compileOnlyApi(libs.jspecify)
   implementation(libs.githubApi)
 
   testImplementation(platform(libs.junit.bom))
   testImplementation(libs.junit.api)
   testImplementation(libs.mammoth.test)
   testRuntimeOnly(libs.junit.engine)
-  testRuntimeOnly(libs.junit.launrcher)
+  testRuntimeOnly(libs.junit.launcher)
 }
 
 indra {

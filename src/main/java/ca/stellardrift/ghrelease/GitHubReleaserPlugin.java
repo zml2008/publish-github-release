@@ -22,7 +22,6 @@ import org.gradle.api.Project;
 import org.gradle.api.plugins.ExtensionContainer;
 import org.gradle.api.plugins.PluginContainer;
 import org.gradle.api.tasks.TaskContainer;
-import org.jetbrains.annotations.NotNull;
 
 public class GitHubReleaserPlugin implements ProjectPlugin {
   public static final String GITHUB_RELEASE_EXTENSION_NAME = "githubRelease";
@@ -33,10 +32,10 @@ public class GitHubReleaserPlugin implements ProjectPlugin {
 
   @Override
   public void apply(
-    final @NotNull Project project,
-    final @NotNull PluginContainer plugins,
-    final @NotNull ExtensionContainer extensions,
-    final @NotNull TaskContainer tasks
+    final Project project,
+    final PluginContainer plugins,
+    final ExtensionContainer extensions,
+    final TaskContainer tasks
   ) {
     // extension
     final GithubReleaserExtension extension = extensions.create(

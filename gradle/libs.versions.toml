@@ -8,14 +8,14 @@ mammoth = "1.5.0"
 
 [libraries]
 githubApi = { module = "org.kohsuke:github-api", version = "1.330"}
-jetbrainsAnnotations = { module = "org.jetbrains:annotations", version = "26.0.2-1"}
+jspecify = { module = "org.jspecify:jspecify", version = "1.0.0" }
 mammoth = { module = "net.kyori:mammoth", version.ref = "mammoth" }
 
 # testing
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api" }
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
-junit-launrcher = { module = "org.junit.platform:junit-platform-launcher" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 mammoth-test = { module = "net.kyori:mammoth-test", version.ref = "mammoth" }
 
 [plugins]

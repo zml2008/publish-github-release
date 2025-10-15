@@ -24,45 +24,44 @@ import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.PathSensitive;
 import org.gradle.api.tasks.PathSensitivity;
-import org.jetbrains.annotations.NotNull;
 
 public interface ReleaseJobParameters {
   @Input
   @Optional // if it's not present, just use the tag name
-  @NotNull Property<String> getReleaseName();
+  Property<String> getReleaseName();
 
   @Input
-  @NotNull Property<String> getReleaseBody();
+  Property<String> getReleaseBody();
 
   @Input
-  @NotNull Property<String> getRepository();
+  Property<String> getRepository();
 
   @Input
-  @NotNull Property<String> getTagName(); // defaults to trimmed GITHUB_REF
-
-  @Input
-  @Optional
-  @NotNull Property<String> getSourceBranch(); // if set, will create a tag with the provided name
-
-  @Input
-  @NotNull Property<Boolean> getDraft();
-
-  @Input
-  @NotNull Property<Boolean> getPrerelease();
+  Property<String> getTagName(); // defaults to trimmed GITHUB_REF
 
   @Input
   @Optional
-  @NotNull Property<String> getDiscussionCategoryName();
+  Property<String> getSourceBranch(); // if set, will create a tag with the provided name
+
+  @Input
+  Property<Boolean> getDraft();
+
+  @Input
+  Property<Boolean> getPrerelease();
+
+  @Input
+  @Optional
+  Property<String> getDiscussionCategoryName();
 
   @Input
   Property<Boolean> getGenerateReleaseNotes();
 
   @Input
-  @NotNull Property<LatestState> getMakeLatest();
+  Property<LatestState> getMakeLatest();
 
   @InputFiles
   @PathSensitive(PathSensitivity.RELATIVE)
-  @NotNull ConfigurableFileCollection getArtifacts();
+  ConfigurableFileCollection getArtifacts();
 
   enum LatestState {
     TRUE,

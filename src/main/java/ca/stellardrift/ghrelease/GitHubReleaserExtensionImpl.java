@@ -22,7 +22,6 @@ import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.provider.ProviderFactory;
-import org.jetbrains.annotations.NotNull;
 
 class GitHubReleaserExtensionImpl implements GithubReleaserExtension {
   private final Property<String> enterpriseUrl;
@@ -60,67 +59,67 @@ class GitHubReleaserExtensionImpl implements GithubReleaserExtension {
   }
 
   @Override
-  public @NotNull Property<String> getEnterpriseUrl() {
+  public Property<String> getEnterpriseUrl() {
     return this.enterpriseUrl;
   }
 
   @Override
-  public @NotNull Property<String> getApiToken() {
+  public Property<String> getApiToken() {
     return this.apiToken;
   }
 
   @Override
-  public @NotNull Property<String> getReleaseName() {
+  public Property<String> getReleaseName() {
     return this.releaseTitle;
   }
 
   @Override
-  public @NotNull Property<String> getReleaseBody() {
+  public Property<String> getReleaseBody() {
     return this.releaseBody;
   }
 
   @Override
-  public @NotNull Property<String> getRepository() {
+  public Property<String> getRepository() {
     return this.repository;
   }
 
   @Override
-  public @NotNull Property<String> getTagName() {
+  public Property<String> getTagName() {
     return this.tagName;
   }
 
   @Override
-  public @NotNull Property<String> getSourceBranch() {
+  public Property<String> getSourceBranch() {
     return this.sourceBranch;
   }
 
   @Override
-  public @NotNull Property<Boolean> getDraft() {
+  public Property<Boolean> getDraft() {
     return this.draft;
   }
 
   @Override
-  public @NotNull Property<Boolean> getPrerelease() {
+  public Property<Boolean> getPrerelease() {
     return this.prerelease;
   }
 
   @Override
-  public @NotNull Property<String> getDiscussionCategoryName() {
+  public Property<String> getDiscussionCategoryName() {
     return this.discussionCategoryName;
   }
 
   @Override
-  public @NotNull Property<Boolean> getGenerateReleaseNotes() {
+  public Property<Boolean> getGenerateReleaseNotes() {
     return this.generateReleaseNotes;
   }
 
   @Override
-  public @NotNull Property<LatestState> getMakeLatest() {
+  public Property<LatestState> getMakeLatest() {
     return this.makeLatest;
   }
 
   @Override
-  public @NotNull ConfigurableFileCollection getArtifacts() {
+  public ConfigurableFileCollection getArtifacts() {
     return this.sourceArtifacts;
   }
 }
