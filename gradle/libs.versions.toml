@@ -3,7 +3,7 @@ format = { version = "1.1" }
 
 [versions]
 indra = "4.0.0"
-junit = "5.13.4"
+junit = "5.14.4"
 mammoth = "1.5.0"
 
 [libraries]
